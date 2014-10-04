@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var stylus = require('gulp-stylus');
 var concat = require('gulp-concat');
 var mainBowerFiles = require('main-bower-files');
-var browserify = require('gulp-browserify');
 var watch = require('gulp-watch');
 
 gulp.task('stylesheets', function () {
@@ -18,8 +17,8 @@ gulp.task('bower', function() {
 });
 
 gulp.task('javascripts', function () {
-  gulp.src('./client/javascripts/app.js')
-    .pipe(browserify())
+  gulp.src('./client/javascripts/**/*.js')
+    .pipe(concat('app.js'))
     .pipe(gulp.dest('./public'));
 });
 

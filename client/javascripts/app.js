@@ -1,5 +1,3 @@
 'use strict';
 
-var test = require('./test'); 
-
-test();
+console.log('Hello World');
