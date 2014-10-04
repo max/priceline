@@ -1,3 +1,3 @@
 'use strict';
 
-console.log('Hello World');
+window.App = Ember.Application.create();
