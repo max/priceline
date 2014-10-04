@@ -28,6 +28,7 @@ gulp.task('javascripts', function () {
 gulp.task('default', ['stylesheets', 'bower', 'javascripts']);
 
 gulp.task('watch', function() {
+  gulp.watch('./views/**/*', reload);
   gulp.watch('./client/stylesheets/*', ['stylesheets']);
   gulp.watch('./bower_components/**/*', ['bower', reload]);
   gulp.watch('./client/javascripts/*', ['javascripts', reload]);
